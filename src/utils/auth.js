@@ -1,14 +1,14 @@
 import auth0 from 'auth0-js';
 import { navigateTo } from "gatsby-link";
 
-const AUTH0_DOMAIN = '<your-domain>.auth0.com';
-const AUTH0_CLIENT_ID = '<your-client-id>';
+const AUTH0_DOMAIN = 'dmgt-test.auth0.com';
+const AUTH0_CLIENT_ID = 'p0mhFSbdt5w1QmMcaZWcHVQyIHj7j8wm';
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: AUTH0_DOMAIN,
     clientID: AUTH0_CLIENT_ID,
-    redirectUri: 'http://localhost:8000/callback',
+    redirectUri: 'https://brave-aryabhata-b3982e.netlify.com/callback',
     audience: `https://${AUTH0_DOMAIN}/api/v2/`,
     responseType: 'token id_token',
     scope: 'openid profile email'
